@@ -538,11 +538,29 @@ export const WBTC_MOONBEAM = new Token(
   'Wrapped BTC bridged using Multichain'
 );
 
+export const WBTT_BITTORRENT = new Token(
+  ChainId.BIT_TORRENT_MAINNET,
+  '0x23181F21DEa5936e24163FFABa4Ea3B316B57f3C',
+  18,
+  'WBTT',
+  'Wrapped Bit Torrent'
+);
+
+export const USDC_BIT_TORRENT = new Token(
+  ChainId.BIT_TORRENT_MAINNET,
+  //TODO ADD USDC Address
+  '',
+  6,
+  'USDC',
+  'USD Coin'
+)
+
+
 export class TokenProvider implements ITokenProvider {
   constructor(
     private chainId: ChainId,
     protected multicall2Provider: IMulticallProvider
-  ) {}
+  ) { }
 
   private async getTokenSymbol(
     addresses: string[],
@@ -687,10 +705,8 @@ export class TokenProvider implements ITokenProvider {
       }
 
       log.info(
-        `Got token symbol and decimals for ${
-          Object.values(addressToToken).length
-        } out of ${addresses.length} tokens on-chain ${
-          providerConfig ? `as of: ${providerConfig?.blockNumber}` : ''
+        `Got token symbol and decimals for ${Object.values(addressToToken).length
+        } out of ${addresses.length} tokens on-chain ${providerConfig ? `as of: ${providerConfig?.blockNumber}` : ''
         }`
       );
     }
@@ -795,6 +811,8 @@ export const USDC_ON = (chainId: ChainId): Token => {
       return USDC_BASE;
     case ChainId.BASE_GOERLI:
       return USDC_BASE_GOERLI;
+    case ChainId.BIT_TORRENT_MAINNET:
+      return USDC_BIT_TORRENT;
     default:
       throw new Error(`Chain id: ${chainId} not supported`);
   }

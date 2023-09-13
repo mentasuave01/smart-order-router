@@ -60,7 +60,8 @@ import {
   WETH_POLYGON,
   WMATIC_POLYGON,
   WMATIC_POLYGON_MUMBAI,
-  WXDAI_GNOSIS
+  WXDAI_GNOSIS,
+  USDC_BIT_TORRENT
 } from '../token-provider';
 
 import { IV3PoolProvider } from './pool-provider';
@@ -154,6 +155,7 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ],
   [ChainId.BASE_GOERLI]: [WRAPPED_NATIVE_CURRENCY[ChainId.BASE_GOERLI]],
   [ChainId.BASE]: [WRAPPED_NATIVE_CURRENCY[ChainId.BASE], USDC_BASE],
+  [ChainId.BIT_TORRENT_MAINNET]: [WRAPPED_NATIVE_CURRENCY[ChainId.BIT_TORRENT_MAINNET], USDC_BIT_TORRENT]
 };
 
 /**
@@ -171,7 +173,7 @@ export class StaticV3SubgraphProvider implements IV3SubgraphProvider {
   constructor(
     private chainId: ChainId,
     private poolProvider: IV3PoolProvider
-  ) {}
+  ) { }
 
   public async getPools(
     tokenIn?: Token,
