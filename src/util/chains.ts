@@ -291,7 +291,6 @@ export const ID_TO_PROVIDER = (id: ChainId): string => {
     case ChainId.BASE:
       return process.env.JSON_RPC_PROVIDER_BASE!;
     case ChainId.BIT_TORRENT_MAINNET:
-      //TODO: ADD RPC to the env
       return process.env.JSON_RPC_PROVIDER_BIT_TORRENT!;
     default:
       throw new Error(`Chain id: ${id} not supported`);
