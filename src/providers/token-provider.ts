@@ -546,13 +546,37 @@ export const WBTT_BITTORRENT = new Token(
   'Wrapped Bit Torrent'
 );
 
-export const USDC_BIT_TORRENT = new Token(
+export const USDC_BITTORRENT = new Token(
   ChainId.BIT_TORRENT_MAINNET,
-  //TODO ADD USDC Address
-  '',
+  '0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E',
   6,
-  'USDC',
-  'USD Coin'
+  'USDC_e',
+  'USD Coin (ETH)'
+)
+
+export const WBTC_BITTORRENT = new Token(
+  ChainId.BIT_TORRENT_MAINNET,
+  '0x9888221fE6B5A2ad4cE7266c7826D2AD74D40CcF',
+  8,
+  'WBTC_e',
+  'Wrapped Bitcoin (ETH)'
+)
+
+
+export const USDT_BITTORRENT = new Token(
+  ChainId.BIT_TORRENT_MAINNET,
+  '0xdB28719F7f938507dBfe4f0eAe55668903D34a15',
+  6,
+  'USDT_t',
+  'USD Tether (Tron)'
+)
+
+export const ETH_BITTORRENT = new Token(
+  ChainId.BIT_TORRENT_MAINNET,
+  '0x1249C65AfB11D179FFB3CE7D4eEDd1D9b98AD006',
+  18,
+  'ETH',
+  'Ether'
 )
 
 
@@ -812,7 +836,7 @@ export const USDC_ON = (chainId: ChainId): Token => {
     case ChainId.BASE_GOERLI:
       return USDC_BASE_GOERLI;
     case ChainId.BIT_TORRENT_MAINNET:
-      return USDC_BIT_TORRENT;
+      return USDC_BITTORRENT;
     default:
       throw new Error(`Chain id: ${chainId} not supported`);
   }

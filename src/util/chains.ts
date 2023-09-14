@@ -108,7 +108,7 @@ export enum ChainName {
   AVALANCHE = 'avalanche-mainnet',
   BASE = 'base-mainnet',
   BASE_GOERLI = 'base-goerli',
-  BIT_TORRENT_MAINNET = 'bit-torrent',
+  BIT_TORRENT_MAINNET = 'bit-torrent-mainnet',
 }
 
 

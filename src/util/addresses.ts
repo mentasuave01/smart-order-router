@@ -2,7 +2,7 @@ import { CHAIN_TO_ADDRESSES_MAP, ChainId, Token } from '@uniswap/sdk-core';
 import { FACTORY_ADDRESS } from '@uniswap/v3-sdk';
 
 import { NETWORKS_WITH_SAME_UNISWAP_ADDRESSES } from './chains';
-import { CachingTokenProviderWithFallback } from '../providers';
+import { CachingTokenProviderWithFallback, ETH_BITTORRENT } from '../providers';
 
 export const BNB_TICK_LENS_ADDRESS = CHAIN_TO_ADDRESSES_MAP[ChainId.BNB].tickLensAddress;
 export const BNB_NONFUNGIBLE_POSITION_MANAGER_ADDRESS = CHAIN_TO_ADDRESSES_MAP[ChainId.BNB].nonfungiblePositionManagerAddress;
@@ -168,12 +168,5 @@ export const WETH9: {
     'WETH',
     'Wrapped Ether'
   ),
-  [ChainId.BIT_TORRENT_MAINNET]: new Token(
-    ChainId.BIT_TORRENT_MAINNET,
-    //TODO: Get this address
-    '',
-    18,
-    'WETH',
-    'Wrapped Ether'
-  )
+  [ChainId.BIT_TORRENT_MAINNET]: ETH_BITTORRENT,
 };
