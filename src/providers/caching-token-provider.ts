@@ -22,6 +22,7 @@ import {
   DAI_OPTIMISM,
   DAI_OPTIMISM_GOERLI,
   DAI_POLYGON_MUMBAI,
+  ETH_BITTORRENT,
   ETH_BNB,
   ITokenProvider,
   TokenAccessor,
@@ -29,6 +30,7 @@ import {
   USDC_ARBITRUM_GOERLI,
   USDC_AVAX,
   USDC_BASE,
+  USDC_BITTORRENT,
   USDC_BNB,
   USDC_ETHEREUM_GNOSIS,
   USDC_MAINNET,
@@ -38,11 +40,13 @@ import {
   USDC_POLYGON,
   USDC_SEPOLIA,
   USDT_ARBITRUM,
+  USDT_BITTORRENT,
   USDT_BNB,
   USDT_MAINNET,
   USDT_OPTIMISM,
   USDT_OPTIMISM_GOERLI,
   WBTC_ARBITRUM,
+  WBTC_BITTORRENT,
   WBTC_MAINNET,
   WBTC_MOONBEAM,
   WBTC_OPTIMISM,
@@ -145,7 +149,10 @@ export const CACHE_SEED_TOKENS: {
     WETH: WRAPPED_NATIVE_CURRENCY[ChainId.BASE],
   },
   [ChainId.BIT_TORRENT_MAINNET]: {
-    //TODO: Add A list of supported Tokens
+    USDC: USDC_BITTORRENT,
+    USDT: USDT_BITTORRENT,
+    WETH: ETH_BITTORRENT,
+    WBTC: WBTC_BITTORRENT
   }
   // Currently we do not have providers for Moonbeam mainnet or Gnosis testnet
 };

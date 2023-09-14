@@ -562,7 +562,6 @@ export const WBTC_BITTORRENT = new Token(
   'Wrapped Bitcoin (ETH)'
 )
 
-
 export const USDT_BITTORRENT = new Token(
   ChainId.BIT_TORRENT_MAINNET,
   '0xdB28719F7f938507dBfe4f0eAe55668903D34a15',
