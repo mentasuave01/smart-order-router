@@ -189,7 +189,8 @@ export const NATIVE_NAMES_BY_ID: { [chainId: number]: string[] } = {
   [ChainId.BIT_TORRENT_MAINNET]: [
     'BTT',
     'BITTORRENT',
-    '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
+    //'0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee'
+    '0x0000000000000000000000000000000000001010',
   ]
 };
 

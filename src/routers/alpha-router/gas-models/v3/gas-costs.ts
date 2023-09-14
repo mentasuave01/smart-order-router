@@ -38,7 +38,7 @@ export const BASE_SWAP_COST = (id: ChainId): BigNumber => {
       return BigNumber.from(2000);
     //TODO: verify this value
     case ChainId.BIT_TORRENT_MAINNET:
-      return BigNumber.from(2000);
+      return BigNumber.from(200000);
   }
 };
 export const COST_PER_INIT_TICK = (id: ChainId): BigNumber => {
@@ -69,7 +69,7 @@ export const COST_PER_INIT_TICK = (id: ChainId): BigNumber => {
       return BigNumber.from(31000);
     //TODO: verify this
     case ChainId.BIT_TORRENT_MAINNET:
-      return BigNumber.from(31000);
+      return BigNumber.from(310000);
   }
 };
 
@@ -100,12 +100,17 @@ export const COST_PER_HOP = (id: ChainId): BigNumber => {
       return BigNumber.from(80000);
     //TODO: verify this
     case ChainId.BIT_TORRENT_MAINNET:
-      return BigNumber.from(80000);
+      return BigNumber.from(800000);
   }
 };
 
-export const SINGLE_HOP_OVERHEAD = (_id: ChainId): BigNumber => {
-  return BigNumber.from(15000);
+export const SINGLE_HOP_OVERHEAD = (id: ChainId): BigNumber => {
+  switch (id) {
+    case ChainId.BIT_TORRENT_MAINNET:
+      return BigNumber.from(150000);
+    default:
+      return BigNumber.from(15000);
+  }
 };
 
 export const TOKEN_OVERHEAD = (id: ChainId, route: V3Route): BigNumber => {
@@ -126,12 +131,18 @@ export const TOKEN_OVERHEAD = (id: ChainId, route: V3Route): BigNumber => {
     }
   }
 
+  if (id == ChainId.BIT_TORRENT_MAINNET) {
+    overhead = overhead.add(1500000);
+  }
+
   return overhead;
 };
 
 // TODO: change per chain
 export const NATIVE_WRAP_OVERHEAD = (id: ChainId): BigNumber => {
   switch (id) {
+    case ChainId.BIT_TORRENT_MAINNET:
+      return BigNumber.from(279380);
     default:
       return BigNumber.from(27938);
   }
@@ -139,6 +150,8 @@ export const NATIVE_WRAP_OVERHEAD = (id: ChainId): BigNumber => {
 
 export const NATIVE_UNWRAP_OVERHEAD = (id: ChainId): BigNumber => {
   switch (id) {
+    case ChainId.BIT_TORRENT_MAINNET:
+      return BigNumber.from(360000);
     default:
       return BigNumber.from(36000);
   }

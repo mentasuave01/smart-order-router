@@ -1,8 +1,6 @@
 import { CHAIN_TO_ADDRESSES_MAP, ChainId, Token } from '@uniswap/sdk-core';
 import { FACTORY_ADDRESS } from '@uniswap/v3-sdk';
 
-import { ETH_BITTORRENT } from '../providers';
-
 import { NETWORKS_WITH_SAME_UNISWAP_ADDRESSES } from './chains';
 
 export const BNB_TICK_LENS_ADDRESS = CHAIN_TO_ADDRESSES_MAP[ChainId.BNB].tickLensAddress;
@@ -44,7 +42,7 @@ export const QUOTER_V2_ADDRESSES: AddressMap = {
 export const MIXED_ROUTE_QUOTER_V1_ADDRESSES: AddressMap = {
   [ChainId.MAINNET]: CHAIN_TO_ADDRESSES_MAP[ChainId.MAINNET].v1MixedRouteQuoterAddress,
   [ChainId.GOERLI]: CHAIN_TO_ADDRESSES_MAP[ChainId.GOERLI].v1MixedRouteQuoterAddress,
-  [ChainId.BIT_TORRENT_MAINNET]: CHAIN_TO_ADDRESSES_MAP[ChainId.BIT_TORRENT_MAINNET].v1MixedRouteQuoterAddress,
+  //[ChainId.BIT_TORRENT_MAINNET]: CHAIN_TO_ADDRESSES_MAP[ChainId.BIT_TORRENT_MAINNET].v1MixedRouteQuoterAddress,
 };
 
 export const UNISWAP_MULTICALL_ADDRESSES: AddressMap = {
@@ -104,6 +102,7 @@ export const WETH9: {
     | ChainId.MOONBEAM
     | ChainId.BNB
     | ChainId.AVALANCHE
+    | ChainId.BIT_TORRENT_MAINNET
   >]: Token;
 } = {
   [ChainId.MAINNET]: new Token(
@@ -169,5 +168,4 @@ export const WETH9: {
     'WETH',
     'Wrapped Ether'
   ),
-  [ChainId.BIT_TORRENT_MAINNET]: ETH_BITTORRENT,
 };
