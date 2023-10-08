@@ -24,7 +24,6 @@ export const V2_SUPPORTED = [
   ChainId.MAINNET,
   ChainId.GOERLI,
   ChainId.SEPOLIA,
-  //TODO: check if our interfaces are compaitble
   ChainId.BIT_TORRENT_MAINNET,
 ];
 
@@ -35,7 +34,7 @@ export const HAS_L1_FEE = [
   ChainId.ARBITRUM_GOERLI,
   ChainId.BASE,
   ChainId.BASE_GOERLI,
-  ChainId.BIT_TORRENT_MAINNET,
+  // ChainId.BIT_TORRENT_MAINNET,
 ];
 
 export const NETWORKS_WITH_SAME_UNISWAP_ADDRESSES = [

@@ -42,7 +42,7 @@ export const QUOTER_V2_ADDRESSES: AddressMap = {
 export const MIXED_ROUTE_QUOTER_V1_ADDRESSES: AddressMap = {
   [ChainId.MAINNET]: CHAIN_TO_ADDRESSES_MAP[ChainId.MAINNET].v1MixedRouteQuoterAddress,
   [ChainId.GOERLI]: CHAIN_TO_ADDRESSES_MAP[ChainId.GOERLI].v1MixedRouteQuoterAddress,
-  //[ChainId.BIT_TORRENT_MAINNET]: CHAIN_TO_ADDRESSES_MAP[ChainId.BIT_TORRENT_MAINNET].v1MixedRouteQuoterAddress,
+  [ChainId.BIT_TORRENT_MAINNET]: CHAIN_TO_ADDRESSES_MAP[ChainId.BIT_TORRENT_MAINNET].v1MixedRouteQuoterAddress,
 };
 
 export const UNISWAP_MULTICALL_ADDRESSES: AddressMap = {

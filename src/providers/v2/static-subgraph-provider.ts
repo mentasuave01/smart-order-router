@@ -1,4 +1,4 @@
-import { ChainId, Token } from '@uniswap/sdk-core';
+import { ChainId, Token, V2_FACTORY_ADDRESSES, V2_FACTORY_INIT_HASH } from '@uniswap/sdk-core';
 import { Pair } from '@uniswap/v2-sdk';
 import _ from 'lodash';
 
@@ -94,7 +94,9 @@ export class StaticV2SubgraphProvider implements IV2SubgraphProvider {
 
     const subgraphPools: V2SubgraphPool[] = _(pairs)
       .map(([tokenA, tokenB]) => {
-        const poolAddress = Pair.getAddress(tokenA, tokenB);
+        const factoryAddress = V2_FACTORY_ADDRESSES[tokenA.chainId];
+        const initHashCode = V2_FACTORY_INIT_HASH[tokenA.chainId];
+        const poolAddress = Pair.getAddress(tokenA, tokenB, factoryAddress, initHashCode);
 
         if (poolAddressSet.has(poolAddress)) {
           return undefined;
