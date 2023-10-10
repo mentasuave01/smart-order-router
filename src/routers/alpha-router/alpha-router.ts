@@ -1496,7 +1496,8 @@ export class AlphaRouter
     const v2ProtocolSpecified = protocols.includes(Protocol.V2);
     const v2SupportedInChain = V2_SUPPORTED.includes(this.chainId);
     const shouldQueryMixedProtocol = protocols.includes(Protocol.MIXED) || (noProtocolsSpecified && v2SupportedInChain);
-    const mixedProtocolAllowed = [ChainId.MAINNET, ChainId.GOERLI].includes(this.chainId) &&
+    //TODO: This should not be hard coded, we probably can just grab it from the SDK-Core v2 factory contracts address keys instead
+    const mixedProtocolAllowed = [ChainId.MAINNET, ChainId.GOERLI, ChainId.BIT_TORRENT_MAINNET].includes(this.chainId) &&
       tradeType === TradeType.EXACT_INPUT;
 
     const beforeGetCandidates = Date.now();
