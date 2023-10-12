@@ -198,9 +198,12 @@ export class V2PoolProvider implements IV2PoolProvider {
 
       const { reserve0, reserve1 } = reservesResult.result;
 
+
       const pool = new Pair(
         CurrencyAmount.fromRawAmount(token0, reserve0.toString()),
-        CurrencyAmount.fromRawAmount(token1, reserve1.toString())
+        CurrencyAmount.fromRawAmount(token1, reserve1.toString()),
+        V2_FACTORY_ADDRESSES[token0.chainId],
+        V2_FACTORY_INIT_HASH[token0.chainId]
       );
 
       const poolAddress = sortedPoolAddresses[i]!;
