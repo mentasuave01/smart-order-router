@@ -31,7 +31,7 @@
     "node": ">=10"
   },
   "resolutions": {
-    "**/@uniswap/v2-sdk": "npm:@spookyswaptest-er/v2-sdk@2.0.0",
+    "**/@uniswap/v2-sdk": "npm:@spookyswaptest/v2-sdk@1.0.2",
     "**/@uniswap/sdk-core": "npm:@spookyswaptest-er/sdk-core@^2.0.0",
     "**/@uniswap/universal-router-sdk": "npm:@spookyswaptest-er/universal-router-sdk@2.0.0"
   },
