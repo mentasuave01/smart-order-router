@@ -66,6 +66,8 @@ export const DEFAULT_ROUTING_CONFIG_BY_CHAIN = (
       };
     //TODO: Fill in configuration values
     case ChainId.BIT_TORRENT_MAINNET:
+    case ChainId.FANTOM:
+    case ChainId.EON:
     default:
       return {
         v2PoolSelection: {
