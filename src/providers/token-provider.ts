@@ -469,16 +469,16 @@ export const USDC_BASE = new Token(
   6,
   'USDbC',
   'USD Base Coin'
-)
+);
 
-// Base Goerli Tokens 
+// Base Goerli Tokens
 export const USDC_BASE_GOERLI = new Token(
   ChainId.BASE_GOERLI,
   '0x853154e2A5604E5C74a2546E2871Ad44932eB92C',
   6,
   'USDbC',
   'USD Base Coin'
-)
+);
 
 // Gnosis Tokens
 export const USDC_ETHEREUM_GNOSIS = new Token(
@@ -552,7 +552,7 @@ export const USDC_BITTORRENT = new Token(
   6,
   'USDC_e',
   'USD Coin (ETH)'
-)
+);
 
 export const WBTC_BITTORRENT = new Token(
   ChainId.BIT_TORRENT_MAINNET,
@@ -560,7 +560,7 @@ export const WBTC_BITTORRENT = new Token(
   8,
   'WBTC_e',
   'Wrapped Bitcoin (ETH)'
-)
+);
 
 export const USDT_BITTORRENT = new Token(
   ChainId.BIT_TORRENT_MAINNET,
@@ -568,7 +568,7 @@ export const USDT_BITTORRENT = new Token(
   6,
   'USDT_t',
   'USD Tether (Tron)'
-)
+);
 
 export const ETH_BITTORRENT = new Token(
   ChainId.BIT_TORRENT_MAINNET,
@@ -576,14 +576,36 @@ export const ETH_BITTORRENT = new Token(
   18,
   'ETH',
   'Ether'
-)
+);
 
+export const USDC_AXL_FANTOM = new Token(
+  ChainId.FANTOM,
+  '0x1B6382DBDEa11d97f24495C9A90b7c88469134a4',
+  6,
+  'USDC_AXL',
+  'axUSD Coin (FTM)'
+);
+export const USDC_LZ_FANTOM = new Token(
+  ChainId.FANTOM,
+  '0x28a92dde19D9989F39A49905d7C9C2FAc7799bDf',
+  6,
+  'USDC_LZ',
+  'LzUSD Coin (FTM)'
+);
+
+export const USDC_EON = new Token(
+  ChainId.EON,
+  '0x07ca47917Dc05f84B44c629A54247e45A88Bf2F4',
+  6,
+  'USDC',
+  'USD Coin (EON)'
+);
 
 export class TokenProvider implements ITokenProvider {
   constructor(
     private chainId: ChainId,
     protected multicall2Provider: IMulticallProvider
-  ) { }
+  ) {}
 
   private async getTokenSymbol(
     addresses: string[],
@@ -728,8 +750,10 @@ export class TokenProvider implements ITokenProvider {
       }
 
       log.info(
-        `Got token symbol and decimals for ${Object.values(addressToToken).length
-        } out of ${addresses.length} tokens on-chain ${providerConfig ? `as of: ${providerConfig?.blockNumber}` : ''
+        `Got token symbol and decimals for ${
+          Object.values(addressToToken).length
+        } out of ${addresses.length} tokens on-chain ${
+          providerConfig ? `as of: ${providerConfig?.blockNumber}` : ''
         }`
       );
     }
@@ -836,6 +860,10 @@ export const USDC_ON = (chainId: ChainId): Token => {
       return USDC_BASE_GOERLI;
     case ChainId.BIT_TORRENT_MAINNET:
       return USDC_BITTORRENT;
+    case ChainId.FANTOM:
+      return USDC_AXL_FANTOM;
+    case ChainId.EON:
+      return USDC_EON;
     default:
       throw new Error(`Chain id: ${chainId} not supported`);
   }

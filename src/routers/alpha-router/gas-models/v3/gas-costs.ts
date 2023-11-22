@@ -39,6 +39,10 @@ export const BASE_SWAP_COST = (id: ChainId): BigNumber => {
     //TODO: verify this value
     case ChainId.BIT_TORRENT_MAINNET:
       return BigNumber.from(200000);
+    case ChainId.FANTOM:
+      return BigNumber.from(2000);
+    case ChainId.EON:
+      return BigNumber.from(2000);
   }
 };
 export const COST_PER_INIT_TICK = (id: ChainId): BigNumber => {
@@ -70,6 +74,10 @@ export const COST_PER_INIT_TICK = (id: ChainId): BigNumber => {
     //TODO: verify this
     case ChainId.BIT_TORRENT_MAINNET:
       return BigNumber.from(310000);
+    case ChainId.FANTOM:
+      return BigNumber.from(31000);
+    case ChainId.EON:
+      return BigNumber.from(31000);
   }
 };
 
@@ -101,6 +109,10 @@ export const COST_PER_HOP = (id: ChainId): BigNumber => {
     //TODO: verify this
     case ChainId.BIT_TORRENT_MAINNET:
       return BigNumber.from(800000);
+    case ChainId.FANTOM:
+      return BigNumber.from(80000);
+    case ChainId.EON:
+      return BigNumber.from(80000);
   }
 };
 
