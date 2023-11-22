@@ -1,6 +1,6 @@
 {
-  "name": "@spookyswaptest/smart-order-router",
-  "version": "1.0.6-tta7",
+  "name": "@spookyswaptest-er/smart-order-router",
+  "version": "2.0.0",
   "description": "Spookyswap Smart Order Router",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
@@ -31,9 +31,9 @@
     "node": ">=10"
   },
   "resolutions": {
-    "**/@uniswap/v2-sdk": "npm:@spookyswaptest/v2-sdk@1.0.2",
-    "**/@uniswap/sdk-core": "npm:@spookyswaptest/sdk-core@1.0.5",
-    "**/@uniswap/universal-router-sdk": "npm:@spookyswaptest/universal-router-sdk@^1.0.4"
+    "**/@uniswap/v2-sdk": "npm:@spookyswaptest-er/v2-sdk@2.0.0",
+    "**/@uniswap/sdk-core": "npm:@spookyswaptest-er/sdk-core@^2.0.0",
+    "**/@uniswap/universal-router-sdk": "npm:@spookyswaptest-er/universal-router-sdk@2.0.0"
   },
   "dependencies": {
     "@uniswap/default-token-list": "^11.2.0",
