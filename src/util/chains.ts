@@ -316,7 +316,7 @@ export const ID_TO_PROVIDER = (id: ChainId): string => {
     case ChainId.BASE:
       return process.env.JSON_RPC_PROVIDER_BASE!;
     case ChainId.BIT_TORRENT_MAINNET:
-      return process.env.JSON_RPC_PROVIDER_BIT_TORRENT!;
+      return process.env.JSON_RPC_PROVIDER_BIT_TORRENT_MAINNET!;
     case ChainId.FANTOM:
       return process.env.JSON_RPC_PROVIDER_FANTOM!;
     case ChainId.EON:
