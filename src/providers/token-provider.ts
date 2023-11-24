@@ -546,10 +546,11 @@ export const WBTT_BITTORRENT = new Token(
   'Wrapped Bit Torrent'
 );
 
+//TODO: USE THE CORRECT USDC ADDRESS, THIS IS JUST A SPOOKY DUMMY TOKEN
 export const USDC_BITTORRENT = new Token(
   ChainId.BIT_TORRENT_MAINNET,
-  '0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E',
-  6,
+  '0x3850fA3DB6E5Acc6d06EfC9B1eB4A9d1c0E3e068',
+  18,
   'USDC_e',
   'USD Coin (ETH)'
 );
