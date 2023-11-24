@@ -204,7 +204,7 @@ export const NATIVE_NAMES_BY_ID: { [chainId: number]: string[] } = {
     //'0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee'
     '0x0000000000000000000000000000000000001010',
   ],
-  [ChainId.FTM]: [
+  [ChainId.FANTOM]: [
     'FTM',
     'FANTOM',
     '0x000000000000000000000000000000000000dEaD',
