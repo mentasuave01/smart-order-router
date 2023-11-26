@@ -240,7 +240,7 @@ Total ticks crossed: 7
 ## EON Mainnet
 
 ```
-./bin/cli quote --tokenIn 0xF5cB8652a84329A2016A386206761f455bCEDab6 --tokenOut 0xCc44eB064CD32AAfEEb2ebb2a47bE0B882383b53 --amount 10 --exactIn --minSplits 1 --protocols v2 --router alpha --chainId 7332
+./bin/cli quote --tokenIn 0xCc44eB064CD32AAfEEb2ebb2a47bE0B882383b53 --tokenOut 0xF5cB8652a84329A2016A386206761f455bCEDab6  --amount 10 --exactIn --minSplits 1 --protocols v2 --router alpha --chainId 7332
 ```
 
 
