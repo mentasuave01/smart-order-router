@@ -237,7 +237,11 @@ Total ticks crossed: 7
 ./bin/cli quote --tokenIn 0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83 --tokenOut 0x28a92dde19D9989F39A49905d7C9C2FAc7799bDf --amount 10 --exactIn --minSplits 1 --protocols v2 --router alpha --chainId 250
 ```
 
+## Getting a v2 Pair address
 
+```
+./bin/cli poolAddressUtils --tokenIn 0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83 --tokenOut 0x1B6382DBDEa11d97f24495C9A90b7c88469134a4  --chainId 250
+```
 
 ## Adding a new Chain
 
@@ -253,6 +257,7 @@ The main components to complete are:
 - Populate `src/routers/alpha-router/*`
 - Add a log to `/CHANGELOG.md`
 - Run `npm run integ-test` successfully
+- Add liquidity to v3 for the USDC/W{Native} pool so the gas models can properly quote
 
 # Troubleshooting
 
