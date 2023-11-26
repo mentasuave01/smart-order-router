@@ -25,6 +25,7 @@ import {
   USDC_EON,
   USDC_ETHEREUM_GNOSIS,
   USDC_GOERLI,
+  USDC_LZ_FANTOM,
   USDC_MAINNET,
   USDC_MOONBEAM,
   USDC_OPTIMISM,
@@ -78,7 +79,7 @@ export const usdGasTokensByChain: { [chainId in ChainId]?: Token[] } = {
   [ChainId.AVALANCHE]: [DAI_AVAX, USDC_AVAX],
   [ChainId.BASE]: [USDC_BASE],
   [ChainId.BIT_TORRENT_MAINNET]: [USDC_BITTORRENT],
-  [ChainId.FANTOM]: [USDC_AXL_FANTOM],
+  [ChainId.FANTOM]: [USDC_AXL_FANTOM, USDC_LZ_FANTOM],
   [ChainId.EON]: [USDC_EON],
 };
 

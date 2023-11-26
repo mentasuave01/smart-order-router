@@ -228,9 +228,14 @@ Total ticks crossed: 7
 ## Bittorrent Mainnet
 
 ```
-./bin/cli quote --tokenIn 0x23181F21DEa5936e24163FFABa4Ea3B316B57f3C --tokenOut 0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E --amount 10 --exactIn --minSplits 1 --protocols v3 --router alpha --chainId 199
+./bin/cli quote --tokenIn 0x23181F21DEa5936e24163FFABa4Ea3B316B57f3C --tokenOut 0x3850fA3DB6E5Acc6d06EfC9B1eB4A9d1c0E3e068 --amount 10 --exactIn --minSplits 1 --protocols v3 --router alpha --chainId 199
 ```
 
+## Fantom Mainnet
+
+```
+./bin/cli quote --tokenIn 0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83 --tokenOut 0x28a92dde19D9989F39A49905d7C9C2FAc7799bDf --amount 10 --exactIn --minSplits 1 --protocols v2 --router alpha --chainId 250
+```
 
 
 

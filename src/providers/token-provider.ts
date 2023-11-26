@@ -606,7 +606,7 @@ export class TokenProvider implements ITokenProvider {
   constructor(
     private chainId: ChainId,
     protected multicall2Provider: IMulticallProvider
-  ) {}
+  ) { }
 
   private async getTokenSymbol(
     addresses: string[],
@@ -751,10 +751,8 @@ export class TokenProvider implements ITokenProvider {
       }
 
       log.info(
-        `Got token symbol and decimals for ${
-          Object.values(addressToToken).length
-        } out of ${addresses.length} tokens on-chain ${
-          providerConfig ? `as of: ${providerConfig?.blockNumber}` : ''
+        `Got token symbol and decimals for ${Object.values(addressToToken).length
+        } out of ${addresses.length} tokens on-chain ${providerConfig ? `as of: ${providerConfig?.blockNumber}` : ''
         }`
       );
     }
@@ -862,7 +860,7 @@ export const USDC_ON = (chainId: ChainId): Token => {
     case ChainId.BIT_TORRENT_MAINNET:
       return USDC_BITTORRENT;
     case ChainId.FANTOM:
-      return USDC_AXL_FANTOM;
+      return USDC_LZ_FANTOM;
     case ChainId.EON:
       return USDC_EON;
     default:

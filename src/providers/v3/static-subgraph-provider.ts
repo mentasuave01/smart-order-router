@@ -41,6 +41,7 @@ import {
   USDC_EON,
   USDC_ETHEREUM_GNOSIS,
   USDC_GOERLI,
+  USDC_LZ_FANTOM,
   USDC_MAINNET,
   USDC_MOONBEAM,
   USDC_OPTIMISM,
@@ -161,7 +162,7 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     WRAPPED_NATIVE_CURRENCY[ChainId.BIT_TORRENT_MAINNET],
     USDC_BITTORRENT,
   ],
-  [ChainId.FANTOM]: [WRAPPED_NATIVE_CURRENCY[ChainId.FANTOM], USDC_AXL_FANTOM],
+  [ChainId.FANTOM]: [WRAPPED_NATIVE_CURRENCY[ChainId.FANTOM], USDC_AXL_FANTOM, USDC_LZ_FANTOM],
   [ChainId.EON]: [
     WRAPPED_NATIVE_CURRENCY[ChainId.BIT_TORRENT_MAINNET],
     USDC_EON,
@@ -183,7 +184,7 @@ export class StaticV3SubgraphProvider implements IV3SubgraphProvider {
   constructor(
     private chainId: ChainId,
     private poolProvider: IV3PoolProvider
-  ) {}
+  ) { }
 
   public async getPools(
     tokenIn?: Token,
