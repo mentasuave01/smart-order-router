@@ -22,7 +22,7 @@ import {
   USDC_BASE,
   USDC_BITTORRENT,
   USDC_BNB,
-  USDC_EON,
+  USDC_LZ_EON,
   USDC_ETHEREUM_GNOSIS,
   USDC_GOERLI,
   USDC_LZ_FANTOM,
@@ -80,7 +80,7 @@ export const usdGasTokensByChain: { [chainId in ChainId]?: Token[] } = {
   [ChainId.BASE]: [USDC_BASE],
   [ChainId.BIT_TORRENT_MAINNET]: [USDC_BITTORRENT],
   [ChainId.FANTOM]: [USDC_AXL_FANTOM, USDC_LZ_FANTOM],
-  [ChainId.EON]: [USDC_EON],
+  [ChainId.EON]: [USDC_LZ_EON],
 };
 
 export type L1ToL2GasCosts = {
@@ -97,8 +97,8 @@ export type BuildOnChainGasModelFactoryType = {
   quoteToken: Token;
   v2poolProvider: IV2PoolProvider;
   l2GasDataProvider?:
-    | IL2GasDataProvider<OptimismGasData>
-    | IL2GasDataProvider<ArbitrumGasData>;
+  | IL2GasDataProvider<OptimismGasData>
+  | IL2GasDataProvider<ArbitrumGasData>;
   providerConfig?: ProviderConfig;
 };
 

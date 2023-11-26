@@ -594,9 +594,9 @@ export const USDC_LZ_FANTOM = new Token(
   'LzUSD Coin (FTM)'
 );
 
-export const USDC_EON = new Token(
+export const USDC_LZ_EON = new Token(
   ChainId.EON,
-  '0x07ca47917Dc05f84B44c629A54247e45A88Bf2F4',
+  '0xCc44eB064CD32AAfEEb2ebb2a47bE0B882383b53',
   6,
   'USDC',
   'USD Coin (EON)'
@@ -862,7 +862,7 @@ export const USDC_ON = (chainId: ChainId): Token => {
     case ChainId.FANTOM:
       return USDC_LZ_FANTOM;
     case ChainId.EON:
-      return USDC_EON;
+      return USDC_LZ_EON;
     default:
       throw new Error(`Chain id: ${chainId} not supported`);
   }

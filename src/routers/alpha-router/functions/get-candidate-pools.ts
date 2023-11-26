@@ -55,7 +55,7 @@ import {
   WMATIC_POLYGON_MUMBAI,
   WXDAI_GNOSIS,
   USDC_AXL_FANTOM,
-  USDC_EON,
+  USDC_LZ_EON,
   USDC_LZ_FANTOM
 } from '../../../providers/token-provider';
 import {
@@ -179,7 +179,7 @@ const baseTokensByChain: { [chainId in ChainId]?: Token[] } = {
   [ChainId.BASE]: [USDC_BASE],
   [ChainId.BIT_TORRENT_MAINNET]: [USDC_BITTORRENT],
   [ChainId.FANTOM]: [USDC_AXL_FANTOM, USDC_LZ_FANTOM],
-  [ChainId.EON]: [USDC_EON],
+  [ChainId.EON]: [USDC_LZ_EON],
 };
 
 class SubcategorySelectionPools<SubgraphPool> {

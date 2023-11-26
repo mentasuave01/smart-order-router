@@ -237,6 +237,13 @@ Total ticks crossed: 7
 ./bin/cli quote --tokenIn 0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83 --tokenOut 0x28a92dde19D9989F39A49905d7C9C2FAc7799bDf --amount 10 --exactIn --minSplits 1 --protocols v2 --router alpha --chainId 250
 ```
 
+## EON Mainnet
+
+```
+./bin/cli quote --tokenIn 0xF5cB8652a84329A2016A386206761f455bCEDab6 --tokenOut 0xCc44eB064CD32AAfEEb2ebb2a47bE0B882383b53 --amount 10 --exactIn --minSplits 1 --protocols v2 --router alpha --chainId 7332
+```
+
+
 ## Getting a v2 Pair address
 
 ```
