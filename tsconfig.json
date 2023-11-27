@@ -36,5 +36,6 @@
     "types": ["node", "jest"]
   },
   "include": ["src/index.ts"],
+  "exclude": ["test"],
   "compileOnSave": false
 }
